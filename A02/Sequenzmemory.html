@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sequenz-Memory</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Sequenzmemory.js"></script>
+</head>
+
+<body>
+    <h1>Sequenz-Memory</h1>
+    <div id="directions">
+      
+        <p>1.)Wort eingeben oder vordefiniertes Wort wählen</p>
+        <div class="inputGroup">
+                <span id="input"><input type="text" id="inputSequence" placeholder="Hier Wort eingeben"><i class="fas fa-check-circle"></i></span> oder
+                <div id="randombutton">Zufälliges Wort auswählen</div>
+            </div>
+        <p>2.) Zeit in Sekunden eingeben für Anschau- und Spielzeit</p>
+        <input type="number" id="inputWatchTime" placeholder="watch-time" value="5">
+        <input type="number" id="inputPlayTime" placeholder="play-time" value="20">
+
+        <p>Decke die Buchstaben in der richtigen Reihenfolge auf.</p>
+        <div id="playbutton">Spiel starten</div>
+    </div>
+    <div id="playspace">
+        <span id="watchTime"></span>
+        <span id="playTime"></span>
+        <p>Dein Wort: <span id="word"></span></p>
+        <div id="memoryCards">
+        </div>
+    </div>
+</body>
+</html>
