@@ -1,0 +1,28 @@
+{ 
+    "Artikel": [
+    {"name": "Milch", "preis": 1, "einheit": "liter"},
+    {"name" : "Eier", "preis": 2, "einheit": "Stück"},
+    {"name" : "Brot", "preis": 2, "einheit": "Packung"},
+    {"name" : "Wurst", "preis" : 5, "einheit" : "Stück"},
+    {"name" : "Käse", "preis" : 3, "einheit" : "Stück"}
+],
+
+    "Supermarkt": [
+        {"name": "-", "preis": 0, "einheit" : ""},
+        {"name": "Aldi", "preis": 0, "einheit" : ""},
+        {"name": "Lidl", "preis": 0, "einheit": ""},
+        {"name": "Rewe", "preis": 0, "einheit": ""}
+    ],
+
+    "Hausarbeiten": [
+        {"name": "Wischen", "preis": 15, "einheit":""},
+        {"name" :"Abwaschen", "preis" : 15, "einheit":""},
+        {"name": "Staubsaugen", "preis" : 15, "einheit":""}
+    ],
+
+    "Zahlung": [
+        {"name": "Bar", "preis":0, "einheit":""},
+        {"name": "PayPal", "preis":0, "einheit":""},
+        {"name": "Überweisung", "preis":0, "einheit":""}
+    ]
+}

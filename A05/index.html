@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5 - Haushaltshilfe
+        <link rel="stylesheet" href="style.css">
+        <script src="generateContent.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Haushaltshilfe</h1>
+        </header>
+        <form id="orderForm" method="GET">
+            <div id="form">
+                <h2>Bestelloptionen</h2>
+                <fieldset id="Artikel">
+                    <legend>Produkte</legend>
+                </fieldset>
+                <fieldset id="Supermarkt">
+                    <legend>Supermarkt</legend>
+                </fieldset>
+                <fieldset>
+                    <legend>Finanzen</legend>
+                    <input type="radio" name="Geld" id="abholen" value="Abheben">
+                    <label for="abholen">Abheben</label>
+                    <input type="radio" name="Geld" id="einzahlen" value="Einzahlen">
+                    <label for="einzahlen">Einzahlen</label>
+                    <input type="number" name="Betrag" step="1" min="0" max="9999999" value="0">
+                </fieldset>
+                <fieldset id="Hausarbeiten">
+                    <legend>Hausarbeiten</legend>
+                </fieldset>
+                <fieldset id="Zahlung">
+                    <legend>Zahlungsmethode</legend>
+                </fieldset>
+            </div>
+        </form>
+        <div id="bestellübersicht">
+            <h2>Bestellübersicht</h2>
+            <div>...</div>
+            <button id="resetbutton" type="reset" form="orderForm">Reset</button>
+            <butto id="submit" type="button" form="orderForm">Submit</butto>
+        </div>
+    </body>
+    </title>
+
+
+
+
+
+</html>
