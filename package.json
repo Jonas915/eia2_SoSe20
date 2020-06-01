@@ -1,0 +1,19 @@
+{
+  "name": "eia2_new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node A06/Server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geibelan/EIA2_New.git"
+  },
+  "author": "ty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geibelan/EIA2_New/issues"
+  },
+  "homepage": "https://github.com/geibelan/EIA2_New#readme"
+}
