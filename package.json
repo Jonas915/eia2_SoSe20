@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/geibelan/EIA2_New/issues"
   },
-  "homepage": "https://github.com/geibelan/EIA2_New#readme"
+  "homepage": "https://github.com/geibelan/EIA2_New#readme",
+  "dependencies": {
+    "tslint": "^6.1.2"
+  }
 }
