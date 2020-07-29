@@ -1,0 +1,17 @@
+fieldset {
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-end;
+    align-content: flex-start;
+    width: 400px;
+}
+
+#myCanvas {
+    float: left;
+}
+
+#colorOptions {
+    width: 300px;
+}

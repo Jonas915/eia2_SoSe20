@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style_editor.css">
+    <title>Editor Zauberbild</title>
+    <link rel="shortcut icon" href="Thumbnail.ico" type="image/x-icon">
+    <link rel="icon" href="Thumbnail.ico" type="image/x-icon">
+    <script src="canvas.js"></script>
+    <!--<script src="Server.js"></script>-->
+    <script src="mainclass.js"></script>
+    <!--<script src="main.js"></script>-->
+    <script src="cube.js"></script>
+    <!--<script src="Database.js"></script>-->
+    <!-- <script src="DBClient.js" type="text/javascript" charset="utf-8"></script>-->
+</head>
+
+<body>
+    <canvas width=600 height=600 style="border: 1px solid rgb(45, 35, 107, 0.75)" id="myCanvas"></canvas>
+
+    <fieldset id="canvasSize">
+        <legend>Wähle ein Format für die Zeichenfläche</legend>
+        <input type="radio" id="small" name="groesse" value="small">
+        <label for="mc"> Hochformat</label>
+        <input type="radio" id="medium" name="groesse" value="medium">
+        <label for="vi"> Quadrat</label>
+        <input type="radio" id="large" name="groesse" value="large">
+        <label for="ae">Querformat</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Wähle eine Hintergrundfarbe</legend>
+        <button id="blue">blau</button>
+        <button id="white">weiß</button>
+        <button id="grey">grau</button>
+        <button id="green">grün</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Formen bearbeiten</legend>
+        <input type="radio" id="edit" name="edit" value="edit">
+        <label>Ausgewählte Form bearbeiten</label>
+        <input type="radio" id="xedit" name="edit" value="xedit">
+        <label>Alle bearbeiten</label>
+    </fieldset>
+
+    <!--<p>Slide to scale canvas</p>-->
+    <!--<input type="range" id="canvasscale" min="-10" max="20" value="0" onchange="scaleCanvas()"><br>-->
+    <!--<p>Zeichenfläche verändern</p>
+    Height:<input type="text" id="height" onchange="resizeCanvas()" value="400"> 
+    Width: <input type="text" id="width" onchange="resizeCanvas()" value="400">
+    <input type="submit" value="Submit">-->
+
+    
+
+    <fieldset>
+        <legend>Kreise erstellen</legend>
+        <!--Kann auch durch images mit onclick ersetzt werden damit nicht alles buttons wird.-->
+        <button id="circle">Kreis platzieren</button>
+
+
+
+        <!--THIS IS A RADIOBUTTON-VERSION OF THE ANIMATION PART OF THIS APPLICATION-->
+        <!--<input type="radio" id="rotation" name="animation" value="rotation">
+        <label for="mc">rotation</label>
+
+        <input type="radio" id="scale" name="animation" value="space">
+        <label for="mc">space</label>
+
+        <input type="radio" id="mover" name="animation" value="mover">
+        <label for="ae">mover</label>-->
+
+        <!--THIS IS A BUTTON VERSION OF THE ANIMATION PART OF THIS APPLICATION-->
+        <div id="animations"></div>
+        
+
+
+        <fieldset id="colorOptions">
+            <legend>Farbe ändern</legend>
+            <input type="radio" id="purple" name="color" value="color">
+            <label for="mc">purple</label>
+
+            <input type="radio" id="pink" name="color" value="color">
+            <label for="mc">pink</label>
+
+            <input type="radio" id="blue" name="color" value="color">
+            <label for="mc">blue</label>
+
+        </fieldset>
+    </fieldset>
+</body>
+</html>
