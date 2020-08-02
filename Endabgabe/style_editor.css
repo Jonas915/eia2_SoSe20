@@ -1,17 +1,192 @@
-fieldset {
-    display: inline-block;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    justify-content: flex-end;
-    align-content: flex-start;
-    width: 400px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #370C62;
+	display: grid;
+    grid-template-areas: 
+    'canvas canvas BgStyle BgStyle BgStyle . '
+    'canvas canvas forms forms forms . '
+    'canvas canvas animations animations animations . '
+    'canvas canvas form form form form';
+    grid-template-rows: minmax(0,5);
 }
 
-#myCanvas {
+#audiobutton {  
+    float: right;
+}
+
+canvas {
+    grid-area: canvas;  
+}
+
+#canvasDesign {
+    grid-area: BgStyle; 
+    display: grid;
+    grid-template-areas:'height width background1';
+}
+
+#canvasHeight {
+    text-align: center;
+    display: grid;
+    grid-area: height;
+    width: 125px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+#canvasWidth {
+    text-align: center;
+    display: grid;
+    grid-area: width;
+    width: 125px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+#backgroundColorWrapper {
+    display: none;
+    grid-area: background1;
     float: left;
+    margin-top: 10px;
+    height: 50px;
+    width: 225px;
 }
 
-#colorOptions {
-    width: 300px;
+#forms {
+    grid-area: forms;
+    display: grid;
+    grid-template-areas: 
+    'button11 button12 button13';
+}
+
+#triangle {
+    grid-area: button11;
+    color: white;
+}
+
+#square {
+    grid-area: button12;
+    color: white;
+}
+
+#circle {
+    grid-area: button13;
+    color: white;
+}
+
+#animations {
+    grid-area: animations;
+    display: grid;
+    grid-template-areas: 
+    'button21 button22 animation23 animation24';
+}
+
+#rotate {
+    text-align: center;
+    grid-area: button21;
+}
+
+#move {
+    text-align: center;
+    grid-area: button22;
+}
+
+#scale {
+    text-align: center;
+    grid-area: animation23; 
+    margin-left: 10px; 
+    width: 180px;
+    height: 75px;
+    padding-left: 10px;
+}
+
+#colorPickerWrapper {
+    grid-area: animation24;
+    float: left;
+    margin-top: 10px;
+    width: 215px;
+}
+
+form {
+    grid-area: form; 
+    display: grid; 
+    grid-template-areas: 
+    'database11 database12 list';
+    grid-template-rows: minmax(0,60);
+}
+
+#savedPictures {
+    text-align: center;
+    width: 150px;
+    grid-area: database11;
+    margin-left: 0px;
+    padding-left: 10px;
+}
+
+#save  {
+    grid-area: database11;
+}
+
+#databasePictures{
+    grid-area: database12;
+    display: grid;
+    grid-template-areas:
+    'database1 database2';
+}
+
+button {
+    width: 75px; 
+    height: 75px; 
+    margin: 10px;
+    border: none; 
+    color: white; 
+}
+
+input {
+    height: 50px; 
+    margin: 10px; 
+    width: 100px;
+    border: none; 
+    color: white;
+    background: #84119F;
+}
+
+input[type="color"] {
+    position: relative;
+    top: -7px; 
+    grid-area: form1;
+    margin: 10px;
+	width: 190px;
+	height: 40px;
+    border: none;
+}
+
+input::placeholder {
+    color: white; 
+}
+
+#circle, #triangle, #square, #save, #squares, #plain {
+    border-radius: 50%;
+    background: #84119F;
+  
+}
+#rotate, #colorChange, #move{
+    width: 100px;
+    background: #84119F;
+}
+
+#allForms {
+    grid-area: list;
+    width: 225px;
+    margin-bottom: 5px;
+    text-align: center;
+    background: black;
+}
+
+#allForms * {
+    text-align: center;
+    display: block;
+    height: 15px; 
+    padding-top: 15px; 
+    color: white; 
+    border-radius: 50px;
 }

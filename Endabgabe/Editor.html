@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zauberbild Editor</title>
+    <link rel="stylesheet" href="style_editor.css">
+    <script src="Vector.js"></script>
+    <script src="Form.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Square.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="main.js"></script>    
+    <link rel="shortcut icon" href="Thumbnail.ico" type="image/x-icon">
+    <link rel="icon" href="Thumbnail.ico" type="image/x-icon">
+</head>
+
+<body onkeyup="Jonas_EIA2.deleteElement(event)">
+
+    <canvas></canvas>
+
+    <span id="canvasStyle">
+        <input type="number" id="canvasHeight" placeholder="Höhe eingeben">
+        <input type="number" id="canvasWidth" placeholder="Breite eingeben">
+        <div id="backgroundColorWrapper">
+            <input type="color" value="#ffffff" id="backgroundColor">
+        </div>
+    </span>
+
+    <div id="forms">
+        <button type="button" id="circle">Kreis</button>
+        <button type="button" id="triangle">Dreieck</button>
+        <button type="button" id="square">Quadrat</button>
+    </div>
+
+    <div id="animations">
+        <button type="button" id="rotate">Drehen</button>
+        <button type="button" id="move">Bewegen</button>
+        <input type="number" id="scale" min="0" max="5" placeholder="Skalierfaktor eingeben">
+        <div id="colorPickerWrapper">
+            <input type="color" value="#ffffff" id="colorPicker">
+        </div>
+    </div>
+
+    <form>
+        <button type="button" id="save">Speichern</button>
+        <span id="databasePictures">
+            <input id="savedPictures" name="Bildersammlung" list="Bildersammlung"placeholder="Bild laden">
+            <datalist id="Bildersammlung">
+            </datalist>
+        </span>
+        <div id="allForms">
+            <span>Übersicht</span>
+        </div>
+    </form>
+    <audio id="audiobutton" controls autoplay>
+        <source src="bgmusic.mp3" type="audio/mp3">
+      </audio>
+</body>
+</html>
