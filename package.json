@@ -1,5 +1,5 @@
 {
-  "name": "eia2_new",
+  "name": "eia2_sose20",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geibelan/EIA2_New.git"
+    "url": "git+https://github.com/Jonas915/eia2_SoSe20.git"
   },
   "author": "ty",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/geibelan/EIA2_New/issues"
+    "url": "https://github.com/Jonas915/eia2_SoSe20"
   },
-  "homepage": "https://github.com/geibelan/EIA2_New#readme",
+  "homepage": "https://github.com/Jonas915/eia2_SoSe20",
   "dependencies": {
     "tslint": "^6.1.2"
   }
