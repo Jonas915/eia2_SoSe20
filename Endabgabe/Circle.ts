@@ -40,9 +40,9 @@ namespace Jonas_EIA2 {
                 this.position.x += canvasRender.canvas.width;
             if (this.position.y < this.size.y)
                 this.position.y += canvasRender.canvas.height;
-            if (this.position.x > canvasRender.canvas.width - this.size.x)
+            if (this.position.x > canvasRender.canvas.width)
                 this.position.x -= canvasRender.canvas.width;
-            if (this.position.y > canvasRender.canvas.height - this.size.y)
+            if (this.position.y > canvasRender.canvas.height)
                 this.position.y -= canvasRender.canvas.height;
         }
     }

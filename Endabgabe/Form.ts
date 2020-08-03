@@ -36,7 +36,7 @@ namespace Jonas_EIA2 {
             }
             else {
                 this.color = "#ffffff";
-                this.size = new Vector(70, 70);
+                this.size = new Vector(60, 60);
                 this.position = new Vector(canvas.width / 2, canvas.height / 2);
                 this.rotation = 0;
                 this.active = true;

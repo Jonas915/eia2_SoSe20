@@ -5,9 +5,6 @@ var Jonas_EIA2;
             this.x = _x;
             this.y = _y;
         }
-        static getDifference(_v0, _v1) {
-            return new Vector(_v0.x - _v1.x, _v0.y - _v1.y);
-        }
         set(_x, _y) {
             this.x = _x;
             this.y = _y;

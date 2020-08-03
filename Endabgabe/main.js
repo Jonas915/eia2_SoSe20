@@ -37,7 +37,7 @@ var Jonas_EIA2;
         forms = document.getElementById("forms");
         forms.addEventListener("click", createForm);
         save = document.getElementById("save");
-        //save.addEventListener("click", getName);
+        save.addEventListener("click", Jonas_EIA2.savePicture);
         Jonas_EIA2.savedPictures = document.getElementById("savedPictures");
         // savedPictures.addEventListener("change", loadPicture);
         allForms = document.getElementById("allForms");
@@ -74,10 +74,12 @@ var Jonas_EIA2;
                 break;
             }
         }
+        let colorPicker = document.getElementById("colorPicker");
+        colorPicker.value = "#ffffff";
         updateFormList();
     }
     function updateFormList() {
-        while (allForms.firstChild) {
+        while (allForms.firstChild) { //Schleife, weil Elemente im nächsten Schritt überschrieben/geupdatet werden
             allForms.removeChild(allForms.firstChild);
         }
         let title = document.createElement("span");
@@ -141,6 +143,7 @@ var Jonas_EIA2;
                         figure.scale(parseFloat(scaleValue.value));
                     }
                 }
+                scaleValue.value = "";
             }
             default: {
                 break;

@@ -14,11 +14,11 @@ namespace Jonas_EIA2 {
 
     export let formList: Form[] = [];
     let allForms: HTMLDivElement;
-   
+
     let form: HTMLFormElement;
     let animations: HTMLDivElement;
     let forms: HTMLDivElement;
-    
+
 
     window.addEventListener("load", handleLoad);
 
@@ -59,11 +59,11 @@ namespace Jonas_EIA2 {
         forms.addEventListener("click", createForm);
 
         save = <HTMLButtonElement>document.getElementById("save");
-        //save.addEventListener("click", getName);
+        save.addEventListener("click", savePicture);
 
         savedPictures = <HTMLInputElement>document.getElementById("savedPictures");
-       // savedPictures.addEventListener("change", loadPicture);
-        
+        // savedPictures.addEventListener("change", loadPicture);
+
         allForms = <HTMLDivElement>document.getElementById("allForms");
 
         //loadPicture()
@@ -100,6 +100,9 @@ namespace Jonas_EIA2 {
                 break;
             }
         }
+        let colorPicker: HTMLInputElement = <HTMLInputElement>document.getElementById("colorPicker");
+        colorPicker.value = "#ffffff";
+
         updateFormList();
     }
 
@@ -171,6 +174,7 @@ namespace Jonas_EIA2 {
                         figure.scale(parseFloat(scaleValue.value));
                     }
                 }
+                scaleValue.value = "";
             }
             default: {
                 break;
@@ -184,7 +188,7 @@ namespace Jonas_EIA2 {
         for (let figure of formList) {
             if (figure.active == true) {
                 switch (id) {
-                   
+
                     case "rotate": {
                         figure.moveType = FORM_MOVE.ROTATE;
                         break;

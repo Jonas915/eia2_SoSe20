@@ -36,9 +36,9 @@ var Jonas_EIA2;
                 this.position.x += Jonas_EIA2.canvasRender.canvas.width;
             if (this.position.y < this.size.y)
                 this.position.y += Jonas_EIA2.canvasRender.canvas.height;
-            if (this.position.x > Jonas_EIA2.canvasRender.canvas.width - this.size.x)
+            if (this.position.x > Jonas_EIA2.canvasRender.canvas.width)
                 this.position.x -= Jonas_EIA2.canvasRender.canvas.width;
-            if (this.position.y > Jonas_EIA2.canvasRender.canvas.height - this.size.y)
+            if (this.position.y > Jonas_EIA2.canvasRender.canvas.height)
                 this.position.y -= Jonas_EIA2.canvasRender.canvas.height;
         }
     }

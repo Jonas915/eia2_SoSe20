@@ -41,52 +41,22 @@ var Jonas_EIA2;
     function handleRequest(_request, _response) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("Klappt die Anfrage?");
-            _response.setHeader("content-type", "text/html; charset=utf-8");
-            _response.setHeader("Access-Control-Allow-Origin", "*");
-            if (_request.url) {
-                let url = Url.parse(_request.url, true);
-                if (url.query["command"] == "retrieve") {
-                    let report = yield retrieveEntries();
-                    if (report == "We encountered tecnical problems. Please try again later")
-                        _response.write(report);
-                    else
-                        _response.write(JSON.stringify(report));
-                }
-                else {
-                    console.log("urlQuery: ", url.query);
-                    let jsonString = JSON.stringify(url.query);
-                    _response.write(jsonString);
-                    storeEntry(url.query);
-                    console.log(jsonString);
-                }
+            let query = Url.parse(_request_ur, true).query;
+            let command = query["command"];
+            switch (command) {
+                case "insert":
+                    let Canvas = {};
+                    DatabaseURL.insert(Canvas);
+                    respond(_response, "Bild gespeichert");
+                    break;
+                case "find":
+                    databaseURL.findAll(findCallback);
+                    break;
+                default:
+                    respond(_response, "unknown command" + command);
+                    break;
             }
-            // let cursor: Mongo.Cursor = await entries.find();
-            // cursor.sort("score", -1);    // not sorting
-            _response.end();
         });
-    }
-    function retrieveEntries() {
-        return __awaiter(this, void 0, void 0, function* () {
-            // console.log("Asking DB about entries ", entries.find());
-            let cursor = yield entries.find();
-            cursor = cursor.sort("score", -1);
-            let answer = yield cursor.toArray();
-            console.log("DB CursorToArray", answer);
-            if (answer != null) {
-                return answer;
-            }
-            else
-                return "We encountered tecnical problems. Please try again later";
-        });
-    }
-    function storeEntry(_entry) {
-        console.log("See entry: ");
-        console.log({ name: _entry["name"], score: Number(_entry["score"]) });
-        console.log("Entry[Score] is ");
-        console.log(_entry["score"]);
-        // entries.insertOne(_entry);
-        entries.insertOne({ name: _entry["name"], score: Number(_entry["score"]) });
-        // seperate _entry for name and score (score as number)
     }
 })(Jonas_EIA2 = exports.Jonas_EIA2 || (exports.Jonas_EIA2 = {}));
 //# sourceMappingURL=server.js.map

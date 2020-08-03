@@ -29,7 +29,7 @@ var Jonas_EIA2;
             }
             else {
                 this.color = "#ffffff";
-                this.size = new Jonas_EIA2.Vector(70, 70);
+                this.size = new Jonas_EIA2.Vector(60, 60);
                 this.position = new Jonas_EIA2.Vector(Jonas_EIA2.canvas.width / 2, Jonas_EIA2.canvas.height / 2);
                 this.rotation = 0;
                 this.active = true;
