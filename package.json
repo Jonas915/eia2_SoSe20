@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Jonas915/eia2_SoSe20",
   "dependencies": {
+    "@types/mongodb": "^3.5.25",
+    "mongodb": "^3.6.0",
     "tslint": "^6.1.2"
   }
 }
